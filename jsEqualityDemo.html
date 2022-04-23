@@ -1,0 +1,75 @@
+<html>
+
+<head></head>
+<script>
+    function testDoubleEqual() {
+        var a = 10;
+        var b = "10";
+        if (a == b) {
+            alert("Same");
+        }
+        else {
+            alert("different");
+        }
+
+    }
+
+    function testTrippleEqual() {
+        var a = 10;
+        var b = "10";
+        if (a === b) {
+            alert("Same");
+        }
+        else {
+            alert("different");
+        }
+
+    }
+
+</script>
+
+<body>
+        <h1> ::Are you aware of ==, ===, !=, !==? :: </h1>
+        <ol>
+            <li> <h2>Double Equal Demo</h2>
+                <hr>
+                <pre>
+                    function test() {
+                        var a = 10;
+                        var b = "10";
+                        if (a === b) {
+                            alert("Same");
+                        }
+                        else {
+                            alert("different");
+                        }
+                
+                    }
+                </pre>
+                <button onclick="testDoubleEqual()"> Try it!</button>
+            </li>
+            <li> <h2>Tripple Equal Demo</h2>
+                <hr>
+                <pre>
+                    function testTrippleEqual() {
+                        var a = 10;
+                        var b = "10";
+                        if (a === b) {
+                            alert("Same");
+                        }
+                        else {
+                            alert("different");
+                        }
+                
+                    }
+                </pre>
+                <button onclick="testTrippleEqual()"> Try it!</button>
+            </li>
+
+        </ol>>
+   
+    
+    testTrippleEqual
+</body>
+
+</html>
