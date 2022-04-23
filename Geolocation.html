@@ -1,0 +1,40 @@
+<html>
+
+<head></head>
+<script>
+    function test() {
+        var a = 10;
+        var b = "10";
+        if (a === b) {
+            alert("Same");
+        }
+        else {
+            alert("different");
+        }
+
+    }
+    function fnDisplayLocation() {
+        // to check geolocation is supported or not
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showErrorMessage);
+
+        }
+        else {
+            document.getElementById("pLocation").innerHTML = "Location is not supported by browser"
+        }
+    }
+    function showPosition(position) {
+        document.getElementById("pLocation").innerHTML = "<b> Latitude: </b>" + position.coords.latitude + "<b> Logitude: </b>" + position.coords.longitude
+    }
+    function showErrorMessage(error) {
+        document.getElementById("pLocation").innerHTML = "<p style='color:red'> An error has occurred: " + error.message; + "</p>"
+    }
+
+</script>
+
+<body>
+    <button type="button" name="btnGeo" id="btnGeo" onclick="fnDisplayLocation()">Get Location Details</button>
+    <p id="pLocation"></p>
+</body>
+
+</html>
