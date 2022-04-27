@@ -1,0 +1,50 @@
+<Html>
+
+<head>
+    <script>
+        function validatedata() {
+            uname = document.getElementById("uname").value;
+            if (uname.trim().length == 0) {
+                document.getElementById("unameerr").innerHTML = "username is manditory";
+                return false;
+            } else {
+                document.getElementById("unameerr").innerHTML = "";
+            }
+
+            pass = document.getElementById("pass").value;
+            if (pass.trim().length == 0) {
+                document.getElementById("passerr").innerHTML = "passoword is manditory";
+                return false;
+            } else {
+                document.getElementById("passerr").innerHTML = "";
+                return true;
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <table>
+        <form onsubmit="return validatedata()">
+            <tr>
+                <td>User name :</td>
+                <td><input type="text" name="uname" id="uname"></td>
+                <td id="unameerr"></td>
+            </tr>
+            <tr>
+                <td> Password :</td>
+                <td><input type="password" name="pass" id="pass"></td>
+                <td id="passerr"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" name="btn">Login</button></td>
+                <td></td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</Html>
