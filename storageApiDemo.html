@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script>
+        function adddata() {
+            ///check whether localStorage is supported by browser
+            if (typeof(Storage) !== undefined) {
+                ///retrieve the value of text box
+                nm = document.getElementById("uname").value;
+                localStorage.setItem("name", nm); //localStorage.name=nm
+                if (localStorage.count != undefined) { //localStorage.getItem('count')
+                    localStorage.count = parseInt(localStorage.count) + 1
+
+                } else {
+                    localStorage.count = 1;
+                }
+                document.getElementById("mydiv").innerHTML = "you clicked " + localStorage.count + "times";
+            }
+        }
+
+        function deletedata() {
+            localStorage.removeItem("count");
+            localStorage.removeItem("name");
+        }
+
+        function getData() {
+            ///retrieve data from localStorage and save it in the variables
+            var cnt = localStorage.getItem("count");
+            var nm = localStorage.name;
+            alert(cnt + "  , " + nm);
+
+        }
+    </script>
+
+</head>
+
+<body>
+    username: <input type="text" name="uname" id="uname">
+    <button type="button" name="btn" id="btn1" onclick="adddata()">add to localStorage</button>
+    <button type="button" name="btn" id="btn2" onclick="deletedata()">remove from localStorage</button>
+    <button type="button" name="btn" id="btn3" onclick="getData()">display from localStorage</button>
+    <div id="mydiv"></div>
+
+</body>
+
+</html>
