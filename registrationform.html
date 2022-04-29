@@ -1,0 +1,87 @@
+<html>
+    <body>
+        <table>
+        <form action="menu.html" method="get">
+            <tr>
+                <td><label for="nm">Name :</label></td>
+                <td><input type="text" name="name" id="nm" placeholder="Enter Name" required minlength="3" maxlength="8"><span style="color:red">*</span></td>
+            </tr>
+            <tr>
+                <td><label for="nm">Age :</label></td>
+                <td><input type="number" name="age" id="age" placeholder="Enter Age in full YEARS" min="18" max="99"><span style="color:red">*</span></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address :</label></td>
+                <td> <textarea cols="30" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="nm">Mobile No. :</label></td>
+                <td>+91&nbsp;&nbsp;<input type="text" name="mob" id="mobNum" placeholder="Enter Mobile no." required pattern="[789]\d{9}"><span style="color:red">*</span><br/>
+                    <!-- <h6>The mobile no should be 10 digit  and should start with 7 or 8 or 9</h6></td> -->
+            </tr>
+            <tr>
+                <td><label for="nm">E-Mail :</label></td>
+                <td><input type="email" name="email" id="email" placeholder="Enter Email here" ></td>
+            </tr>
+            <tr>
+                <td><label for="Jdate">Joining Date :</label></td>
+                <td><input type="date" name="date" id="Jdate" min="2022-04-02" max="2023-04-23" placeholder="Enter Date   here" ></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender :</label></td>
+                <td>
+                    <fieldset><legend>Enter Gender</legend>
+                    <input type="radio" name="gender" id="male" value="male" checked><label for="male">Male</label><br>
+                    <input type="radio" name="gender" id="female" value="female"><label for="female">Female</label><br>
+                    <input type="radio" name="gender" id="other" value="other"><label for="other">Other</label><br>
+                </fieldset></td>   
+            </tr>
+            </tr>
+            
+            <tr>
+                <td><label for="degree">Degree :</label></td>
+               
+                <td>
+                    <fieldset><legend>Enter Degree</legend>
+                    <input type="radio" name="degree" id="be" value="BE" checked><label for="be">BE</label><br>
+                    <input type="radio" name="degree" id="Btech" value="BTECH"><label for="Btech">B-tech</label><br>
+                    <input type="radio" name="degree" id="Mtech" value="MTECH"><label for="Mtech">M-tech</label><br>
+                    </fieldset>
+                </td>  
+            </tr>
+            <tr>
+                <td><label>City :</label></td>
+                <td>
+                    <select name="city" id="city" size="1">
+                        <option value="">----Select One City----</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolhapur">Kolhapur</option>
+                        <option value="Nagpur">Nagpur</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="degree">Hobbies :</label></td>
+               
+                <td>
+                    <fieldset><legend>Enter Hobbies</legend>
+                    <input type="checkbox" name="hobbies" id="singing" value="Singing"><label for="singing">Singing</label><br>
+                    <input type="checkbox" name="hobbies" id="running" value="Running"><label for="running">Running</label><br>
+                    <input type="checkbox" name="hobbies" id="reading" value="Reading"><label for="reading">Reading</label><br>
+                    <input type="checkbox" name="hobbies" id="eating" value="eating"><label for="eating"></label>eating<br>
+                    <input type="checkbox" name="hobbies" id="Listening Song's" value="Listening Song's"><label for="Listening Song's"></label>Listening Song's<br>
+                    
+                    </fieldset>
+                </td>  
+            </tr>
+            <tr>
+                <td></td>
+                    <td><button type="submit" name="btn" id="btn1" value="btn1">Login</button>&nbsp;&nbsp;
+                    <button type="reset" name="btn" id="btn2" value="btn2">Clear</button>
+            </td>
+            </tr>
+        </form>
+    </table>
+    </body>
+</html> 
