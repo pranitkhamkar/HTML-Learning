@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script>
+        function adddata() {
+            ///check whether sessionStorage is supported by browser
+            if (typeof(Storage) !== undefined) {
+                ///retrieve the value of text box
+                nm = document.getElementById("uname").value;
+                sessionStorage.setItem("name", nm); //sessionStorage.name=nm
+                if (sessionStorage.count != undefined) { //sessionStorage.getItem('count')
+                    sessionStorage.count = parseInt(sessionStorage.count) + 1
+
+                } else {
+                    sessionStorage.count = 1;
+                }
+                document.getElementById("mydiv").innerHTML = "you clicked " + sessionStorage.count + "times";
+            }
+        }
+
+        function deletedata() {
+            sessionStorage.removeItem("count");
+            sessionStorage.removeItem("name");
+        }
+
+        function getData() {
+            ///retrieve data from localStorage and save it in the variables
+            var cnt = sessionStorage.getItem("count");
+            var nm = sessionStorage.name;
+            alert(cnt + "  , " + nm);
+
+        }
+    </script>
+
+</head>
+
+<body>
+    username: <input type="text" name="uname" id="uname">
+    <button type="button" name="btn" id="btn1" onclick="adddata()">add to sessionStorage</button>
+    <button type="button" name="btn" id="btn2" onclick="deletedata()">remove fromsessionStorage</button>
+    <button type="button" name="btn" id="btn3" onclick="getData()">display from sessionStorage</button>
+    <div id="mydiv"></div>
+
+</body>
+
+</html>
