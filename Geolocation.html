@@ -23,8 +23,9 @@
             document.getElementById("pLocation").innerHTML = "Location is not supported by browser"
         }
     }
+    // Use this site to check the "locatioon https:www.gps-coordinates.net/"
     function showPosition(position) {
-        document.getElementById("pLocation").innerHTML = "<b> Latitude: </b>" + position.coords.latitude + "<b> Logitude: </b>" + position.coords.longitude
+        document.getElementById("pLocation").innerHTML = "<b> Latitude: </b>" + position.coords.latitude + "<br><b> Longitude: </b>" + position.coords.longitude
     }
     function showErrorMessage(error) {
         document.getElementById("pLocation").innerHTML = "<p style='color:red'> An error has occurred: " + error.message; + "</p>"
@@ -34,7 +35,7 @@
 
 <body>
     <button type="button" name="btnGeo" id="btnGeo" onclick="fnDisplayLocation()">Get Location Details</button>
-    <p id="pLocation"></p>
+    <p id="pLocation"></p> 
 </body>
 
 </html>
